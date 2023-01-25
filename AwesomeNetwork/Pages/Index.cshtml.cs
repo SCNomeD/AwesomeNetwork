@@ -1,20 +1,18 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AwesomeNetwork.ViewModels.Account;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace AwesomeNetwork.Pages
 {
     public class IndexModel : PageModel
     {
-        private readonly ILogger<IndexModel> _logger;
+        public RegisterViewModel RegisterView { get; set; }
 
-        public IndexModel(ILogger<IndexModel> logger)
+        public LoginViewModel LoginView { get; set; }
+
+        public IndexModel()
         {
-            _logger = logger;
+            RegisterView = new RegisterViewModel();
+            LoginView = new LoginViewModel();
         }
 
         public void OnGet()

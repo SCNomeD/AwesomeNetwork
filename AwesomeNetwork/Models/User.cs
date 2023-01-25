@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using System;
 
-namespace AwesomeNetwork
+namespace AwesomeNetwork.Models
 {
     public class User : IdentityUser
     {
